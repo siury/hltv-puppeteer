@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/ryansiu17/hltv-puppeteer#readme",
   "dependencies": {
+    "convert-array-to-csv": "^1.0.7",
     "puppeteer": "^1.15.0"
   }
 }

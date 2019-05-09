@@ -1,0 +1,48 @@
+columns:
+
+    -matchid
+
+    -team 1 name
+    -team 2 name
+    -winner 
+
+    -date
+    -map
+    -tournament
+
+    -team 1 rounds
+    -team 2 rounds
+
+    
+
+    team 1 1st half rounds
+    team 1 2nd half rounds
+    team 2 1st half rounds
+    team 2 2nd half rounds
+
+    team 1 player highest adr
+    team 1 player most kills
+    team 1 player most assists
+    team 1 player most deaths
+    team 1 player lowest adr
+    team 1 player lowest kills
+    team 1 player lowest assists
+    team 1 player lowest deaths
+
+    team 2 player highest adr
+    team 2 player most kills
+    team 2 player most assists
+    team 2 player most deaths
+    team 2 player lowest adr
+    team 2 player lowest kills
+    team 2 player lowest assists
+    team 2 player lowest deaths
+
+    Overall most kills
+    Overall most AWP kills
+    Overall most Openers
+    Overall highest adr
+    Overall most Assists
+
+
+    
