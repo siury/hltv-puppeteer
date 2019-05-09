@@ -14,7 +14,7 @@ let scrape = async url => {
   await page.goto(url);
 
   const result = await page.evaluate(() => {
-    let data = {}; // Each match is an object, must be put in array before converted to csv
+    let data = {}; // EaSch match is an object, must be put in array before converted to csv
     data.matchId = window.location.href.split("/")[6];
     data.tournament = document.querySelector(".match-info-box a").innerText;
     data.date = document.querySelector(
