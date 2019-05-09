@@ -1,0 +1,23 @@
+{
+  "name": "hltv-puppeteer",
+  "version": "1.0.0",
+  "description": "Scraper made with puppeteer to grab data from hltv.org",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryansiu17/hltv-puppeteer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ryansiu17/hltv-puppeteer/issues"
+  },
+  "homepage": "https://github.com/ryansiu17/hltv-puppeteer#readme",
+  "dependencies": {
+    "convert-array-to-csv": "^1.0.7",
+    "puppeteer": "^1.15.0"
+  }
+}
