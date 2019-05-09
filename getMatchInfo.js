@@ -48,9 +48,3 @@ async function processUrls(urls) {
 }
 
 processUrls(urls);
-
-/* const output = convertArrayToCSV(out);
-fs.writeFile("output.csv", output, "utf8", error => {
-  console.log(error);
-});
- */
