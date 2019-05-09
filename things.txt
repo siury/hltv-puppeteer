@@ -15,33 +15,69 @@ columns:
 
     
 
-    team 1 1st half rounds
-    team 1 2nd half rounds
-    team 2 1st half rounds
-    team 2 2nd half rounds
+    -team 1 1st half rounds
+    -team 1 2nd half rounds
+    -team 2 1st half rounds
+    -team 2 2nd half rounds
 
-    team 1 player highest adr
-    team 1 player highest adr actual adr
-    team 1 player most kills
-    team 1 player most kills actual kills
-    team 1 player most assists
-    team 1 player most assists actual assists
-    team 1 player most deaths
-    team 1 player most deaths actual deaths
-    team 1 player lowest adr
-    team 1 player lowest adr actual adr
-    team 1 player lowest kills
-    team 1 player lowest kills actual kills
-    team 1 player lowest assists
-    team 1 player lowest assists actual assists
-    team 1 player lowest deaths
-    team 1 player lowest deaths actual deaths
+    -team 1 opening kills
+    -team 2 opening kills
 
+    -team 1 clutches
+    -team 2 clutches
+    
+    -team 1 player most kills
+    -team 1 player most kills actual kills
+    -team 1 player most assists
+    -team 1 player most assists actual assists
+    -team 1 player most deaths
+    -team 1 player most deaths actual deaths
+    -team 1 player highest adr
+    -team 1 player highest adr actual adr
+    
+    -team 1 player lowest kills
+    -team 1 player lowest kills actual kills
+    -team 1 player lowest assists
+    -team 1 player lowest assists actual assists
+    -team 1 player lowest deaths
+    -team 1 player lowest deaths actual deaths
+    -team 1 player lowest adr
+    -team 1 player lowest adr actual adr
+
+    
+    -team 2 player most kills
+    -team 2 player most kills actual kills
+    -team 2 player most assists
+    -team 2 player most assists actual assists
+    -team 2 player most deaths
+    -team 2 player most deaths actual deaths
+    -team 2 player highest adr
+    -team 2 player highest adr actual adr
+    
+    -team 2 player lowest kills
+    -team 2 player lowest kills actual kills
+    -team 2 player lowest assists
+    -team 2 player lowest assists actual assists
+    -team 2 player lowest deaths
+    -team 2 player lowest deaths actual deaths
+    -team 2 player lowest adr
+    -team 2 player lowest adr actual adr
+
+    Overall most kills player
     Overall most kills
-    Overall most AWP kills
-    Overall most Openers
-    Overall highest adr
-    Overall most Assists
+    Overall most kills team
+    Overall most AWP kills player
+    Overall most AWP kills 
+    Overall most AWP kills team
+    Overall most openers player
+    Overall most openers 
+    Overall most openers team
+    Overall highest adr player
+    Overall highest adr 
+    Overall highest adr team
+    Overall most assists player
+    Overall most assists
+    Overall most assists team
 
 
     

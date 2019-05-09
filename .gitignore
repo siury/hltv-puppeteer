@@ -1,1 +1,7 @@
 node_modules
+
+*.csv
+
+things.txt
+
+.eslintrc.json
