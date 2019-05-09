@@ -36,7 +36,7 @@ let scrape = async url => {
   return result;
 };
 
-async function processUrls() {
+async function processUrls(urls) {
   const out = [];
   for (const url of urls) {
     const output = await scrape(url);
@@ -47,7 +47,7 @@ async function processUrls() {
   });
 }
 
-processUrls();
+processUrls(urls);
 
 /* const output = convertArrayToCSV(out);
 fs.writeFile("output.csv", output, "utf8", error => {
