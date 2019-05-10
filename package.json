@@ -18,6 +18,7 @@
   "homepage": "https://github.com/ryansiu17/hltv-puppeteer#readme",
   "dependencies": {
     "convert-array-to-csv": "^1.0.7",
+    "moment": "^2.24.0",
     "puppeteer": "^1.15.0"
   },
   "devDependencies": {

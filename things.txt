@@ -63,21 +63,25 @@ columns:
     -team 2 player lowest adr
     -team 2 player lowest adr actual adr
 
-    Overall most kills player
-    Overall most kills
-    Overall most kills team
-    Overall most AWP kills player
-    Overall most AWP kills 
-    Overall most AWP kills team
-    Overall most openers player
-    Overall most openers 
-    Overall most openers team
-    Overall highest adr player
-    Overall highest adr 
-    Overall highest adr team
-    Overall most assists player
-    Overall most assists
-    Overall most assists team
+    -Overall most kills player
+    -Overall most kills
+    -Overall most kills team
+    -Overall most AWP kills player
+    -Overall most AWP kills 
+    -Overall most AWP kills team
+    -Overall most openers player
+    -Overall most openers 
+    -Overall most openers team
+    -Overall highest adr player
+    -Overall highest adr 
+    -Overall highest adr team
+    -Overall most assists player
+    -Overall most assists
+    -Overall most assists team
 
+    # Maybe?
+
+    Team1Player1 kills
+    Team1Player1 assists... 
 
     

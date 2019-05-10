@@ -10,17 +10,10 @@ let scrape = async () => {
 
   const result = await page.evaluate(() => {
     let data = []; // Create an empty array that will store our data
-    let teams = document.querySelectorAll(".ranked-team"); // Select all Products
+    let teams = document.querySelectorAll(".ranked-team");
 
     for (var element of teams) {
-      let team = {};
-      team.position = element.querySelector(".position").innerText;
-      team.name = element.querySelector(".name").innerText;
-      let players = element.querySelectorAll(".rankingNicknames");
-      for (let i = 0; i < players.length; i++) {
-        team["player" + i] = players[i].innerText;
-      }
-      data.push(team);
+      data.push(element.querySelector(".name").innerText);
     }
     return data; // Return our data array
   });
@@ -30,5 +23,12 @@ let scrape = async () => {
 };
 
 scrape().then(value => {
-  console.log(value); // Success!
+  console.log(value); // Success
+  let text = "";
+  value.map(x => {
+    text += x + "\n";
+  });
+  fs.writeFile("top30.txt", text, error => {
+    error === null ? console.log("Success") : console.log("Error" + error);
+  });
 });
