@@ -25,7 +25,14 @@ async function processTeamNames(teams) {
     out.push(output);
   }
   browser.close();
-  console.log(out);
+  let text = "";
+  out.map(x => {
+    text += x + "\n";
+  });
+  text = text.trim();
+  fs.writeFile("matches.txt", text, error => {
+    error === null ? console.log("Success") : console.log("Error" + error);
+  });
 }
 
 fs.readFile("./top30.txt", "utf-8", (err, data) => {
