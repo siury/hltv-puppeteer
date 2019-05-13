@@ -1,12 +1,19 @@
 const puppeteer = require("puppeteer");
-
+const teamsToGet = ["Liquid", "Astralis"];
 let scrape = async (page, team) => {
   await page.goto(`https://www.hltv.org/search?query=${team}`);
-  const result = await page.evaluate(() => {
-    let teamPage = document.querySelector(".team-logo").parentNode.href; // Create an empty array that will store our data
-    return teamPage; // Return our data array
+  const teamPage = await page.evaluate(() => {
+    let page = document.querySelector(".team-logo").parentNode.href; // Create an empty array that will store our data
+    return page;
   });
-  return result; // Return the data
+  await page.goto(teamPage);
+  const matchesPage = await page.evaluate(() => {
+    let link = window.location.href.split("/");
+    return (
+      "https://www.hltv.org/stats/teams/matches/" + link[4] + "/" + link[5]
+    );
+  });
+  return matchesPage;
 };
 
 async function processTeamNames(teams) {
@@ -21,4 +28,4 @@ async function processTeamNames(teams) {
   console.log(out);
 }
 
-processTeamNames(["Liquid", "Astralis"]);
+processTeamNames(teamsToGet);
