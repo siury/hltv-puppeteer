@@ -19,6 +19,7 @@
   "dependencies": {
     "convert-array-to-csv": "^1.0.7",
     "moment": "^2.24.0",
+    "node-fetch": "^2.5.0",
     "puppeteer": "^1.15.0"
   },
   "devDependencies": {

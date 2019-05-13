@@ -1,5 +1,5 @@
 const puppeteer = require("puppeteer");
-const teamsToGet = ["Liquid", "Astralis"];
+const fs = require("fs");
 let scrape = async (page, team) => {
   await page.goto(`https://www.hltv.org/search?query=${team}`);
   const teamPage = await page.evaluate(() => {
@@ -28,4 +28,7 @@ async function processTeamNames(teams) {
   console.log(out);
 }
 
-processTeamNames(teamsToGet);
+fs.readFile("./top30.txt", "utf-8", (err, data) => {
+  if (err) throw err;
+  processTeamNames(data.trim().split("\n"));
+});
