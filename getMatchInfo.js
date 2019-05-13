@@ -227,82 +227,7 @@ let scrape = async (page, url) => {
 async function processUrls(urls) {
   const browser = await puppeteer.launch({ headless: false });
   const page = await browser.newPage();
-  const header = [
-    "matchId",
-    "tournament",
-    "date",
-    "map",
-    "team1",
-    "team2",
-    "winner",
-    "team1_rounds",
-    "team2_rounds",
-    "team1_first_half",
-    "team1_second_half",
-    "team2_first_half",
-    "team2_second_half",
-    "team1_opening_kills",
-    "team2_opening_kills",
-    "team1_clutches",
-    "team2_clutches",
-    "team1_most_kills_player",
-    "team1_most_kills",
-    "team2_most_kills_player",
-    "team2_most_kills",
-    "team1_most_assists_player",
-    "team1_most_assists",
-    "team2_most_assists_player",
-    "team2_most_assists",
-    "team1_most_deaths_player",
-    "team1_most_deaths",
-    "team2_most_deaths_player",
-    "team2_most_deaths",
-    "team1_most_damage_per_round_player",
-    "team1_most_damage_per_round",
-    "team2_most_damage_per_round_player",
-    "team2_most_damage_per_round",
-    "team2_least_kills_player",
-    "team2_least_kills",
-    "team1_least_assists_player",
-    "team1_least_assists",
-    "team2_least_assists_player",
-    "team2_least_assists",
-    "team1_least_deaths_player",
-    "team1_least_deaths",
-    "team2_least_deaths_player",
-    "team2_least_deaths",
-    "team1_least_damage_per_round_player",
-    "team1_least_damage_per_round",
-    "team2_least_damage_per_round_player",
-    "team2_least_damage_per_round",
-    "overall_most_kills_player",
-    "overall_most_kills",
-    "overall_most_kills_team",
-    "overall_most_damage_player",
-    "overall_most_damage",
-    "overall_most_damage_team",
-    "overall_most_assists_player",
-    "overall_most_assists",
-    "overall_most_assists_team",
-    "overall_most_awp kills_player",
-    "overall_most_awp kills",
-    "overall_most_awp kills_team",
-    "overall_most_first kills_player",
-    "overall_most_first kills",
-    "overall_most_first kills_team",
-    "overall_best_rating 2.0_player",
-    "overall_best_rating 2.0",
-    "overall_best_rating 2.0_team"
-  ];
-  /* fs.appendFile(
-    "output.csv",
-    header.join(",") + "\n",
-    error => {
-      error === null
-        ? console.log(Object.values(output))
-        : console.log("Error" + error);
-    }
-  ); */
+
   for (const url of urls) {
     const output = await scrape(page, url);
     fs.appendFile(
@@ -320,9 +245,5 @@ async function processUrls(urls) {
 
 fs.readFile("./all-matches.txt", "utf-8", (err, data) => {
   if (err) throw err;
-  //processUrls(data.trim().split("\n"));
+  processUrls(data.trim().split("\n"));
 });
-
-processUrls([
-  "https://www.hltv.org/stats/matches/mapstatsid/83275/ence-vs-liquid?contextIds=5973&contextTypes=team"
-]);
