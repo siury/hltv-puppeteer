@@ -52,6 +52,7 @@ async function getMatches(teams) {
     text += x + "\n";
   });
   text = text.trim();
+
   fs.writeFile("all-matches.txt", text, error => {
     error === null ? console.log("Success") : console.log("Error" + error);
   });

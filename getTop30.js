@@ -1,6 +1,4 @@
 const puppeteer = require("puppeteer");
-const { convertArrayToCSV } = require("convert-array-to-csv");
-const fs = require("fs");
 
 let scrape = async () => {
   const browser = await puppeteer.launch({ headless: false });

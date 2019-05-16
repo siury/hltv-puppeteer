@@ -1,5 +1,4 @@
 const puppeteer = require("puppeteer");
-const { convertArrayToCSV } = require("convert-array-to-csv");
 const fs = require("fs");
 
 let scrape = async (page, url) => {
@@ -211,14 +210,30 @@ let scrape = async (page, url) => {
     // Gets overall stats for kills, adr, assists, awp kills, opening kills, rating 2.0
     //     (name, score, team)
     for (let array of overalls) {
-      data["overall_" + array[1].toLowerCase().replace(" ", "_") + "_player"] =
-        array[0];
-      data["overall_" + array[1].toLowerCase().replace(" ", "_")] = array[2];
       data[
-        "overall_" + array[1].toLowerCase().replace(" ", "_") + "_team"
+        "overall_" +
+          array[1]
+            .trim()
+            .toLowerCase()
+            .replace(" ", "_") +
+          "_player"
+      ] = array[0];
+      data[
+        "overall_" +
+          array[1]
+            .trim()
+            .toLowerCase()
+            .replace(" ", "_")
+      ] = array[2];
+      data[
+        "overall_" +
+          array[1]
+            .trim()
+            .toLowerCase()
+            .replace(" ", "_") +
+          "_team"
       ] = await getTeamFrom(array[0]);
     }
-
     return data;
   });
   return result;
@@ -231,7 +246,7 @@ async function processUrls(urls) {
   for (const url of urls) {
     const output = await scrape(page, url);
     fs.appendFile(
-      "output.csv",
+      "matches.csv",
       Object.values(output).join(",") + "\n",
       error => {
         error === null
