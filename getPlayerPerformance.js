@@ -6,14 +6,16 @@ let scrape = async (page, url) => {
   await page.goto(url);
   const result = await page.evaluate(async () => {
     const getNumsFromString = string => {
-      return string.split(" ").filter(x => !isNaN(x));
+      let out = string.split(" ").filter(x => !isNaN(x));
+      return out.length == 2 ? out : out.concat([NaN]);
     };
 
     const getNumsFromParantheses = string => {
-      return string
+      let out = string
         .replace(/[{()}]/g, "")
         .trim()
         .split(" ");
+      return out.length == 2 ? out : out.concat([NaN]);
     };
     let data = [];
     // Match ID
@@ -95,6 +97,7 @@ async function processUrls(urls) {
   browser.close();
 }
 
+//change to test-matches.txt or all-matches.txt
 fs.readFile("all-matches.txt", "utf-8", (err, data) => {
   if (err) throw err;
   processUrls(data.trim().split("\n"));

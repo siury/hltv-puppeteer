@@ -1,5 +1,1 @@
-https://www.hltv.org/stats/matches/mapstatsid/85760/astralis-vs-ence?contextIds=6665&contextTypes=team
-https://www.hltv.org/stats/matches/mapstatsid/85422/fnatic-vs-liquid?contextIds=5973&contextTypes=team
-https://www.hltv.org/stats/matches/mapstatsid/85727/cloud9-vs-ence?contextIds=4869&contextTypes=team
-https://www.hltv.org/stats/matches/mapstatsid/83602/tyloo-vs-panda?contextIds=4863&contextTypes=team
-https://www.hltv.org/stats/matches/mapstatsid/80120/tricked-vs-sprout?contextIds=8637&contextTypes=team
+https://www.hltv.org/stats/matches/mapstatsid/82553/g2-vs-revolution
