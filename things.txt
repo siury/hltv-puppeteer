@@ -79,9 +79,13 @@ columns:
     -Overall most assists
     -Overall most assists team
 
-    # Maybe?
+    Matches:
 
-    Team1Player1 kills
-    Team1Player1 assists... 
+    All Players
+    Tournament Location
 
-    
+
+    Players:
+
+    Player Origin
+    Player get link to page for age
