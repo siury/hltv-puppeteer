@@ -1,6 +1,6 @@
 const fs = require("fs");
 let header =
-  "name,map,date,matchId,tournament,team,against,kills,headshots,assists,hit_flashbangs,deaths,kast,adr,opening_kills,opening_deaths,rating";
+  "name,origin,map,date,matchId,tournament,team,against,kills,headshots,assists,hit_flashbangs,deaths,kast,adr,opening_kills,opening_deaths,rating";
 
 fs.readFile("players.csv", "utf-8", (err, data) => {
   if (err) throw err;

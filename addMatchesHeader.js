@@ -47,6 +47,7 @@ const header = [
   "team1_least_damage_per_round",
   "team2_least_damage_per_round_player",
   "team2_least_damage_per_round",
+  "all_players",
   "overall_most_kills_player",
   "overall_most_kills",
   "overall_most_kills_team",

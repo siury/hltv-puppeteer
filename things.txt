@@ -82,10 +82,9 @@ columns:
     Matches:
 
     All Players
-    Tournament Location
 
 
     Players:
 
-    Player Origin
-    Player get link to page for age
+    -Player Origin
+    -Player get link to page for age
