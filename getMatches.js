@@ -3,6 +3,7 @@ const fs = require("fs");
 
 let scrape = async (page, match) => {
   await page.goto(match);
+  await page.waitForSelector("tbody tr");
   const result = await page.evaluate(async () => {
     Date.prototype.getUnixTime = function() {
       return (this.getTime() / 1000) | 0;
@@ -11,12 +12,13 @@ let scrape = async (page, match) => {
       const newTime = new Date(time);
       return newTime.getUnixTime();
     };
-    const cutOff = await getUnix("01 01 19"); // January 1, 2019
-    const matches = document.querySelectorAll("tbody tr");
+    const cutOff = await getUnix("01 01 18"); // January 1, 2018
+    const matches = document.querySelectorAll(".group1, .group-2, .first");
     let overall = [];
     for (let match of matches) {
       let data = {};
-      let date = match.querySelector(".time").innerText.split("/");
+      console.log(match);
+      let date = match.querySelector(".time a").innerText.split("/");
       date = date[1] + " " + date[0] + " " + date[2];
       let matchDate = await getUnix(date);
       if (cutOff > matchDate) {
