@@ -4,7 +4,7 @@ let scrape = async () => {
   const browser = await puppeteer.launch({ headless: false });
   const page = await browser.newPage();
 
-  await page.goto("https://www.hltv.org/ranking/teams/2019/march/25");
+  await page.goto("https://www.hltv.org/ranking/teams/2019/june/3");
 
   const result = await page.evaluate(() => {
     let data = []; // Create an empty array that will store our data
