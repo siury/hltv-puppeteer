@@ -5,14 +5,17 @@ let scrape = async () => {
   const browser = await puppeteer.launch({ headless: false });
   const page = await browser.newPage();
 
-  await page.goto("https://www.hltv.org/ranking/teams/2019/may/6");
+  await page.goto(
+    "https://www.hltv.org/news/25735/top-20-players-of-2018-introduction"
+  );
 
   const result = await page.evaluate(() => {
     let data = []; // Create an empty array that will store our data
-    let teams = document.querySelectorAll(".ranked-team");
-
-    for (var element of teams) {
-      data.push(element.querySelector(".name").innerText);
+    let players = document.querySelectorAll("blockquote .news-block")[1];
+    let flags = players.querySelectorAll("img");
+    let names = players.querySelectorAll("a");
+    for (let i = 0; i < 20; i++) {
+      data.push({ name: names[i].innerText, loc: flags[i].alt, pos: i + 1 });
     }
     return data; // Return our data array
   });
@@ -22,12 +25,11 @@ let scrape = async () => {
 };
 
 scrape().then(value => {
-  console.log(value); // Success
   let text = "";
-  value.map(x => {
-    text += x + "\n";
-  });
-  fs.writeFile("top30.txt", text, error => {
+  for (let player of value) {
+    text += player.name + "," + player.loc + "," + player.pos + "\n";
+  }
+  fs.writeFile("top20.csv", text, error => {
     error === null ? console.log("Success") : console.log("Error" + error);
   });
 });
